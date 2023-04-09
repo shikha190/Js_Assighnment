@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onkey press</title>
+
+    <style>
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: grey;
+        }
+      #display {
+        color: red;
+      }
+
+      #input-box {
+        font-size: 25px;
+        border: 1px solid black;
+        padding: 15px;
+       border: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="display">Keypress</h1>
+      <input id="input-box" type="text" placeholder="Typing..." />
+    </div>
+      <script>
+        let inputBox = document.getElementById("input-box")
+
+        let display = document.getElementById("display")
+
+        inputBox.addEventListener("keypress", function(e){
+            display.innerText = "you have pressed" + e.key
+        })
+      </script>
+    
+  </body>
+</html>
